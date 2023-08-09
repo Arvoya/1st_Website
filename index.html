@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My Favs</title>
 </head>
 <body>
     <header>
         <h1>My Favorite Websites</h1>
-        <nav></nav>
-        <ul>
-            <li><a href="https://www.youtube.com">youtube</a></li>
-            <li><a href="https://www.arvoya.com">arvoya</a></li>
-            <li><a href="https://www.soundcloud.com">soundcloud</a></li>
-        </ul>            
-            
-        <button onclick="window.location.href='https://www.youtube.com/watch?v=djV11Xbc914';">
-            Favorite Song
-          </button>
-    </header>
-    <img src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="An open but empty notebook next to a laptop. The notebook has glasses and a pen resting ontop.">
-    <main>
         <section>
-            <h2>Hi welcome to my website that showcases my favorite websites!</h2>
+            <p>Hi welcome to my website that showcases my favorite websites!</p>
+            <p>Notice how the colors change when you hover over the different links! </p>
+            <p>All links and buttons will open to a new tab. How neat!</p>
         </section>
+        <nav>
+        <ul>
+            <li><a id="youtube" target="_blank" href="https://www.youtube.com">Youtube</a></li>
+            <li><a id="arvoya" target="_blank" href="https://www.arvoya.com">Arvoya</a></li>
+            <li><a id="soundcloud" target="_blank" href="https://www.soundcloud.com">Soundcloud</a></li>
+        </ul>       
+        </nav>
+             
+        <p id="ButtonGuide">Here is a cool button to my one of my favorite songs:</p>
+        <p id="ButtonGuide">Look how it changes colors too!</p> 
+
+        <a id="button" target="_blank" href="https://www.youtube.com/watch?v=djV11Xbc914">Favorite Song</a>
+
+        <!-- <button id="button" target="_blank" onclick="window.location.href='https://www.youtube.com/watch?v=djV11Xbc914';">
+            Favorite Song
+          </button> -->
+            
+    </header>
+    <img id="front_img" src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="An open but empty notebook next to a laptop. The notebook has glasses and a pen resting ontop.">
+    <main>
+
     </main>
 </body>
 </html>

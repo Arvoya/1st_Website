@@ -1,0 +1,79 @@
+* {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    display: inline-block;
+    margin-bottom: 0%;
+}
+
+p {
+   margin: 0%;
+}
+
+
+
+nav ul {
+    padding-left: 0%;
+    background-color: black;
+}
+
+ul a {
+    color: white;
+}
+
+header nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+#youtube:hover {
+    color: red;
+}
+
+#arvoya:hover{
+    color: green;
+}
+
+#soundcloud:hover {
+    color: orange;
+}
+
+#ButtonGuide {
+    display: inline;
+}
+
+#button {
+    font-family: Sans-serif;
+    text-decoration: none;
+    padding: 1px;
+    background-color: black;
+    color: white;
+    transition: .5s;
+    border-radius: 2px;
+    border: .5px solid white;
+}
+
+#button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#front_img {
+    width: 30%;
+}
+
+nav {
+    width: 30%;
+}
+
+nav ul li {
+    width: 30%;
+}
