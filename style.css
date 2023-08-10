@@ -15,32 +15,15 @@ p {
 
 nav ul {
     padding-left: 0%;
+    
 }
-
-/* #youtube {
-    color:black
-} */
-
-/* ul a {
-    color: white;
-}  */
 
 header nav ul li {
     display: inline-block;
     list-style: none;
+    /* margin-right: 15px; */
+    padding-right: 15px;
 }
-
-/* ! #youtube:hover {
-    color: red;
-}
-
-#arvoya:hover{
-    color: green;
-}
-
-#soundcloud:hover {
-    color: orange;
-} */
 
 #ButtonGuide {
     display: inline;
@@ -85,6 +68,7 @@ main {
     text-decoration: none;
     transition: .5s;
     border-radius: 2px;
+    margin: 5px;
 }
 
 main:hover {
