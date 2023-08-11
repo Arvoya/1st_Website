@@ -95,16 +95,14 @@ function relaxMeter() {
 
     if ( (ZenNum > 0 && ZenNum < 11 ) || typeof ZenNum !== "string") {
         alert("Lets zen out!");
+        let printCount = ZenNum;
+        for(let i = printCount; i > 0; i--) {
+            document.write("<img src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/800px-Yin_and_Yang_symbol.svg.png' alt='Yin and Yang image' </img>");
+            console.log("round: ", i);
+        }
     } else {
         alert("Oops! Please use a number between 1-10!");
         relaxMeter();
-    }
-
-    let printCount = ZenNum;
-    
-    for(let i = printCount; i > 0; i--) {
-        document.write("<img src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/800px-Yin_and_Yang_symbol.svg.png' alt='Yin and Yang image' </img>");
-        console.log("round: ", i);
     }
 
 }
