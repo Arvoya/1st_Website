@@ -1,90 +1,89 @@
 'use strict';
 
+//changes background and text color based on user input
+function getBlackorWhite () {
 
-//prompts for user input
-let userColor = prompt("Hello! What color would you like the website to be: black or white?");
-let userSong = prompt("Whats your favorite song?");
+    let userColor = prompt("Hello! What color would you like the website to be: black or white?");
 
-let youtube = document.getElementById("youtube");
-let arvoya = document.getElementById("arvoya");
-let soundcloud = document.getElementById("soundcloud");
-let button = document.getElementById("button");
-
-//***future change is to use class"links" instead of indivudal list items. 
-// look up function that changes strings to all lower case 
-// changes website color based on choice
-if (userColor === "white" || userColor === "White" || userColor === "WHITE") {
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = "black";
-    youtube.style.color = "black";
-    arvoya.style.color = "black";
-    soundcloud.style.color = "black";
-    button.style.color = "black";
-
-} else if (userColor === "black" || userColor === "Black" || userColor === "BLACK") {
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-    youtube.style.color = "white";
-    arvoya.style.color = "white";
-    soundcloud.style.color = "white";
-    button.style.color = "white";
-} else {
-    // Handle cases where the user input is neither "white" nor "black"
-    alert("Invalid color choice. Please choose either 'white' or 'black'.");
-    youtube.style.color = "black";
-    arvoya.style.color = "black";
-    soundcloud.style.color = "black";
+    // makes sure it can only be 'white' or 'black'
+    if (userColor === "" || userColor === null) {
+        alert("Invalid color choice. Please choose either 'white' or 'black'.");
+        getBlackorWhite();
+    } else if (userColor.toLowerCase() === "white") {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        return;
+    } else if (userColor.toLowerCase() === "black") {
+        console.log(userColor);
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        return;
+    } else {
+        alert("Invalid color choice. Please choose either 'white' or 'black'.");
+        getBlackorWhite();
+        return;
+    }
 }
 
+//creates a youtube search link based on user input
+function createSongLink () {
 
-// if no song was inputed
-if (userSong === ""){
-    console.log(userSong);
-    alert("Please put in a song!");
-    let songRequest = document.createElement("p");
-    songRequest.textContent = "A link to your favorite song could have been here!!!"
-    //append the new text to div section
-    let divSection = document.querySelector("div");
-    divSection.appendChild(songRequest);
+    let userSong = prompt("Whats your favorite song?");
 
-} else {
-//if song was inputed
-let favoriteSongLink = document.createElement("a");
-favoriteSongLink.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(userSong);
-favoriteSongLink.target = "_blank";
-favoriteSongLink.textContent = "Click Me";
-favoriteSongLink.style.color = document.body.style.color;
-
-// Append the new link to the main section
-let mainSection = document.querySelector("main");
-document.write(userSong + "! I love " + userSong + "!");
-mainSection.appendChild(favoriteSongLink);
-
+    //makes sure an input is given
+    if (userSong === "" || userSong === null){
+        alert("Please put in a song!");
+        createSongLink();
+    } else {
+        //creates a new link for user to use
+        let favoriteSongLink = document.createElement("a");
+        favoriteSongLink.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(userSong);
+        favoriteSongLink.target = "_blank";
+        favoriteSongLink.textContent = "Click Me";
+        favoriteSongLink.style.color = document.body.style.color;
+        //appends the link within the html file looking for 'main' element
+        let mainSection = document.querySelector("main");
+        document.write(userSong + "! I love " + userSong + "!");
+        mainSection.appendChild(favoriteSongLink);
+    }
+    return;
 }
 
+//changes color of links to match text
+function linkColorChange() {
 
-// Add event listeners for hover effect
-youtube.addEventListener("mouseover", function() {
-    this.style.color = "red";
-});
+    // creates variables based off of elements
+    let youtube = document.getElementById("youtube");
+    let arvoya = document.getElementById("arvoya");
+    let soundcloud = document.getElementById("soundcloud");
+    let button = document.getElementById("button");
 
-youtube.addEventListener("mouseout", function() {
+    // let links = document.getElementsByClassName("links");
+    // console.log(links);
+    // links.style.color = document.body.style.color;
+
+    // ^ come back when you understand loops
+
+    // changes links color within html file based off of users answer
+    button.style.color = document.body.style.color;
+    youtube.style.color = document.body.style.color;
+    arvoya.style.color = document.body.style.color;
+    soundcloud.style.color = document.body.style.color;
+    return;
     
-    this.style.color = document.body.style.color;
-});
+}
 
-arvoya.addEventListener("mouseover", function() {
-    this.style.color = "green";
-})
+// changes the hover-color of links
+function hoverColor (element, color) {
 
-arvoya.addEventListener("mouseout", function() {
-    this.style.color = document.body.style.color;
-})
-
-soundcloud.addEventListener("mouseover", function() {
-    this.style.color = "orange";
-})
-
-soundcloud.addEventListener("mouseout", function() {
-    this.style.color = document.body.style.color;
-})
+    // notices and changes when mouse hovers over link
+    element.addEventListener("mouseover", function () {
+        this.style.color = color;
+    })
+    
+    // notices and changes when mouse leaves the link
+    element.addEventListener("mouseout", function() {
+        this.style.color = document.body.style.color
+    })
+    
+}

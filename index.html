@@ -5,41 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <title>My Favs</title>
+        <script src="script.js"></script>
     </head>
     
     <body>
-    <header>
-        <h1>My Favorite Websites</h1>
-        <section>
-            <p>Hi welcome to my website that showcases my favorite websites!</p>
-            <p>Notice how the colors change when you hover over the different links! </p>
-            <p>All links and buttons will open to a new tab. How neat!</p>
-        </section>
-        <nav>
-        <ul class="links">
-            <li><a id="youtube" target="_blank" href="https://www.youtube.com">Youtube</a></li>
-            <!-- <style> #youtube:hover {
-                color: red;
-            }</style> -->
-
-            <li><a id="arvoya" target="_blank" href="https://www.arvoya.com">Arvoya</a></li>
-            <li><a id="soundcloud" target="_blank" href="https://www.soundcloud.com">Soundcloud</a></li>
-        </ul>       
-        </nav>
-             
-        <p id="ButtonGuide">Here is a cool button to one of my favorite songs:</p>
-        <p id="ButtonGuide">Look how it fades!</p> 
-
-        <a id="button" target="_blank" href="https://www.youtube.com/watch?v=djV11Xbc914">Tunes</a>
-
-        <!-- <button id="button" target="_blank" onclick="window.location.href='https://www.youtube.com/watch?v=djV11Xbc914';">
-            Favorite Song
-          </button> -->
+        <script> getBlackorWhite(); </script>
+        <header>
+            <h1>My Favorite Websites</h1>
+                <section>
+                    <p>Hi welcome to my website that showcases my favorite websites!</p>
+                    <p>Notice how the colors change when you hover over the different links! </p>
+                    <p>All links and buttons will open to a new tab. How neat!</p>
+                </section>
+            <nav>
+                <ul >
+                    <li><a class="links" id="youtube" target="_blank" href="https://www.youtube.com">Youtube</a></li>
+                    <li><a class="links" id="arvoya" target="_blank" href="https://www.arvoya.com">Arvoya</a></li>
+                    <li><a class="links" id="soundcloud" target="_blank" href="https://www.soundcloud.com">Soundcloud</a></li>
+                </ul> 
+            </nav>
+            
+            <p id="ButtonGuide">Here is a cool button to one of my favorite songs:</p>
+            <p id="ButtonGuide">Look how it fades!</p> 
+            
+            <a id="button" target="_blank" href="https://www.youtube.com/watch?v=djV11Xbc914">Tunes</a>
+            
+            <script>linkColorChange();</script> 
+            <script>hoverColor(youtube, "red"), hoverColor(arvoya, "green"), hoverColor(soundcloud, "orange")</script>     
         </header>
         <img id="front_img" src="https://images.unsplash.com/photo-1502465771179-51f3535da42c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="An open but empty notebook next to a laptop. The notebook has glasses and a pen resting ontop.">
         <div></div>
-        <!-- <p id="favSong">Here is a link so you can find your favorite song!!!!</p> -->
         <main> </main>
-        <script src="script.js"></script>
+        <script>createSongLink();</script>
     </body>
 </html>

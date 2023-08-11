@@ -14,15 +14,25 @@ p {
 
 
 nav ul {
-    padding-left: 0%;
     
+    padding-left: 0%;
+
 }
 
 header nav ul li {
     display: inline-block;
     list-style: none;
     /* margin-right: 15px; */
-    padding-right: 15px;
+    padding-right: 2px;
+    border-right: 10px;
+}
+
+#arvoya {
+    padding-left: 17px;
+}
+
+#soundcloud {
+    padding-left: 17px;
 }
 
 #ButtonGuide {
