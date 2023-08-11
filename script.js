@@ -1,7 +1,7 @@
 'use strict';
 
 //changes background and text color based on user input
-function getBlackorWhite () {
+function getBlackorWhite() {
 
     let userColor = prompt("Hello! What color would you like the website to be: black or white?");
 
@@ -26,12 +26,12 @@ function getBlackorWhite () {
 }
 
 //creates a youtube search link based on user input
-function createSongLink () {
+function createSongLink() {
 
     let userSong = prompt("Whats your favorite song?");
 
     //makes sure an input is given
-    if (userSong === "" || userSong === null){
+    if (userSong === "" || userSong === null) {
         alert("Please put in a song!");
         createSongLink();
     } else {
@@ -43,7 +43,7 @@ function createSongLink () {
         favoriteSongLink.style.color = document.body.style.color;
         //appends the link within the html file looking for 'main' element
         let mainSection = document.querySelector("main");
-        document.write(userSong + "! I love " + userSong + "!");
+        document.write("Listen to your favorite song!");
         mainSection.appendChild(favoriteSongLink);
     }
     return;
@@ -70,20 +70,43 @@ function linkColorChange() {
     arvoya.style.color = document.body.style.color;
     soundcloud.style.color = document.body.style.color;
     return;
-    
+
 }
 
 // changes the hover-color of links
-function hoverColor (element, color) {
+function hoverColor(element, color) {
 
     // notices and changes when mouse hovers over link
     element.addEventListener("mouseover", function () {
         this.style.color = color;
     })
-    
+
     // notices and changes when mouse leaves the link
-    element.addEventListener("mouseout", function() {
+    element.addEventListener("mouseout", function () {
         this.style.color = document.body.style.color
     })
+
+}
+
+//gets a number 
+function relaxMeter() {
+
+    let ZenNum = prompt("How relaxed are you at the moment, on a scale of 1-10? ");
+
+    if ( (ZenNum > 0 && ZenNum < 11 ) || typeof ZenNum !== "string") {
+        alert("Lets zen out!");
+    } else {
+        alert("Oops! Please use a number between 1-10!");
+        relaxMeter();
+    }
+
+    let printCount = ZenNum;
+
+    console.log("printCount: ", printCount);
     
+    for(let i = printCount; i > 0; i--) {
+        document.write("<img src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/800px-Yin_and_Yang_symbol.svg.png' alt='Yin and Yang image' </img>");
+        console.log("round: ", i);
+    }
+
 }
