@@ -88,7 +88,7 @@ function hoverColor(element, color) {
 
 }
 
-//gets a number 
+//gets a number to print, then prints
 function relaxMeter() {
 
     let ZenNum = prompt("How relaxed are you at the moment, on a scale of 1-10? ");
@@ -101,8 +101,6 @@ function relaxMeter() {
     }
 
     let printCount = ZenNum;
-
-    console.log("printCount: ", printCount);
     
     for(let i = printCount; i > 0; i--) {
         document.write("<img src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Yin_and_Yang_symbol.svg/800px-Yin_and_Yang_symbol.svg.png' alt='Yin and Yang image' </img>");
